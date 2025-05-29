@@ -10,7 +10,7 @@ function App() {
   const searchMovie = async () => {
     if (!query) return;
     try {
-      const res = await fetch(`http://localhost:8000/movie-info?title=${query}`);
+      const res = await fetch(`https://movie-info-api.onrender.com/movie-info?title=${query}`);
       const data = await res.json();
       if (data.error) {
         setError(data.error);
