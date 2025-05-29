@@ -1,0 +1,43 @@
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 2rem;
+}
+
+input {
+  padding: 0.5rem;
+  width: 300px;
+  margin-right: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.movie-card {
+  margin-top: 2rem;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.similar-movies {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.similar-movie {
+  text-align: center;
+  width: 120px;
+}
