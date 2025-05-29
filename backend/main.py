@@ -20,10 +20,11 @@ def get_movie_info(title: str = Query(..., description="Movie title")):
     search_url = f"https://api.themoviedb.org/3/search/movie"
     search_params = {"api_key": TMDB_API_KEY, "query": title}
     search_response = requests.get(search_url, params=search_params)
-    search_data = search_response.json()
 
-    if not search_data["results"]:
-        return {"error": "فیلمی با این عنوان یافت نشد."}
+    search_data = response.json()
+
+if "results" not in search_data or not search_data["results"]:
+    return {"error": "Movie not found or invalid API key", "raw_response": search_data}
 
     movie = search_data["results"][0]
     movie_id = movie["id"]
